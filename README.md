@@ -1,46 +1,38 @@
-This is a community-contributed list of [referrer spammers](http://en.wikipedia.org/wiki/Referer_spam) maintained by [Piwik](http://piwik.org/), the leading open source web analytics platform.
+Referer Spam Blacklist
+======================
+
+This is a community-contributed list of [referer spam domains](http://en.wikipedia.org/wiki/Referer_spam)
+
+This repository is a fork of [Piwik's referrer spam blacklist](https://github.com/piwik/referrer-spam-blacklist), with the following main highlights:  
+
+* Domains are added more frequently to keep up with the spammers (Piwik's list [requires](https://github.com/piwik/referrer-spam-blacklist/issues/26#issuecomment-125881499) a vote and a pull request per added domain, which slows down the update, and prevents [automatic updating](https://github.com/piwik/referrer-spam-blacklist/pull/87))
+* Piwik's list changes are merged back regularly in this reposiory
+
 
 ## Usage
 
 The list is stored in this repository in `spammers.txt`. This text file contains one host per line.
 
-You can [download this file manually](https://github.com/piwik/referrer-spam-blacklist/blob/master/spammers.txt), download the [whole folder as zip](https://github.com/piwik/referrer-spam-blacklist/archive/master.zip) or clone the repository using git:
+You can [download this file manually](https://raw.githubusercontent.com/desbma/referrer-spam-blacklist/master/spammers.txt), download the [whole folder as zip](https://github.com/desbma/referrer-spam-blacklist/archive/master.zip) or clone the repository using git:
 
 ```
-git clone https://github.com/piwik/referrer-spam-blacklist.git
+git clone https://github.com/desbma/referrer-spam-blacklist.git
 ```
 
-If you are using PHP, you can also install the list through Composer:
+Parsing the file should be pretty easy using your favorite language.
 
-```
-composer require piwik/referrer-spam-blacklist
-```
-
-Parsing the file should be pretty easy using your favorite language. Beware that the file can contain empty lines.
-
-Here is an example using PHP:
-
-```php
-$list = file('spammers.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-```
-
-### In Piwik
-
-This list is included in each [Piwik](http://piwik.org) release so that referrer spam is filtered automatically. Piwik will also automatically update this list to its latest version every week.
 
 ## Contributing
 
-To add a new referrer spammer to the list, [click here to edit the spammers.txt file](https://github.com/piwik/referrer-spam-blacklist/edit/master/spammers.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/piwik/referrer-spam-blacklist/issues/new). In your issue or pull request please **explain where the referrer domain appeared and why you think it is a spammer**. You are highly encouraged to open **one pull request per new domain**.
+To add a new referer spam domain to this list, [click here to edit the spammers.txt file](https://github.com/desbma/referrer-spam-blacklist/edit/master/spammers.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/desbma/referrer-spam-blacklist/issues/new). In your issue or pull request please **explain where the referrer domain(s) appeared and why you think it is coming from a spammer**. If you think a hostname was added but is not actually a spammer, please follow the same process.
 
 If you open a pull request, it is appreciated if you keep one hostname per line, keep the list ordered alphabetically, and use [Linux line endings](http://en.wikipedia.org/wiki/Newline).
 
-Please [search](https://github.com/piwik/referrer-spam-blacklist/issues) if somebody already reported the host before opening a new one.
-
 ### Subdomains
 
-Piwik does sub-string matching on domain names from this list, so adding `semalt.com` is enough to block all subdomain referrers too, such as `semalt.semalt.com`.
+Sub-string matching on domain names can be done with this list, so adding `semalt.com` is enough to block all subdomain referers too, such as `semalt.semalt.com`.
 
-However, there are cases where you'd only want to add a subdomain but not the root domain. For example, add `referrerspammer.tumblr.com` but not `tumblr.com`, otherwise all `*.tumblr.com` sites would be affected.
+However, there are cases where you'd only want to add a subdomain but not the root domain. For example, add `refererspammer.tumblr.com` but not `tumblr.com`, otherwise all `*.tumblr.com` sites would be affected.
 
 ### Sorting
 
@@ -50,10 +42,7 @@ To keep the list sorted the same way across forks it is recommended to let the c
 sort -uf -o spammers.txt spammers.txt
 ```
 
-## Disclaimer
-
-This list of Referrer spammers is contributed by the community and is provided as is. Use at your own discretion: it may be incomplete (although we aim to keep it up to date) and it may contain outdated entries (let us know if a hostname was added but is not actually a spammer).
 
 ## License
 
-Public Domain (no copyright).
+[WTFPLv2](http://www.wtfpl.net/txt/copying/)
