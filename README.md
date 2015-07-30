@@ -6,10 +6,10 @@ This is a community-contributed list of [referer spam domains](http://en.wikiped
 This repository is a fork of [Piwik's referrer spam blacklist](https://github.com/piwik/referrer-spam-blacklist), with the following main highlights:
 
 * Domains are added more frequently to keep up with the spammers (Piwik's list [requires](https://github.com/piwik/referrer-spam-blacklist/issues/26#issuecomment-125881499) a vote and a pull request per added domain, which slows down the update, and prevents [automatic updating](https://github.com/piwik/referrer-spam-blacklist/pull/87))
-* Piwik's list changes are merged back regularly in this reposiory
+* Piwik's list changes are merged back regularly in this repository
 
 
-## Usage
+## Getting the list
 
 The list is stored in this repository in `spammers.txt`. This text file contains one host per line.
 
@@ -20,6 +20,31 @@ git clone https://github.com/desbma/referer-spam-domains-blacklist.git
 ```
 
 Parsing the file should be pretty easy using your favorite language.
+
+
+## Usage with Fail2ban
+
+This list can be used with [Fail2ban](http://www.fail2ban.org/wiki/index.php/Main_Page), a [script](https://github.com/desbma/referer-spam-domains-blacklist/blob/master/update-fail2ban-referer-filter) is provided to automatically generate or update a filter (located in `/etc/fail2ban/filter.d/apache-referer.local`) that will watch Apache logs, and automatically ban IPs that send HTTP requests with a domain in the blacklist.
+
+It is recommended to run the script at least every week with cron, to keep the list up to date:
+
+    curl https://raw.githubusercontent.com/desbma/referer-spam-domains-blacklist/master/update-fail2ban-referer-filter > /etc/cron.weekly/update-fail2ban-referer-filter
+    chmod +x /etc/cron.weekly/update-fail2ban-referer-filter
+
+You also need to edit `/etc/fail2ban/jail.local`, to locate the Apache logs, and configure ban time:
+
+    [apache-referer]
+    enabled = true
+    maxretry = 1
+    # 90 days
+    bantime = 7776000
+    port = http,https
+    filter = apache-referer
+    logpath = /var/log/apache*/*access.log
+
+Then, run the script a first time to generate the filter:
+
+    /etc/cron.weekly/update-fail2ban-referer-filter
 
 
 ## Contributing
