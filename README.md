@@ -3,7 +3,7 @@ Referer Spam Blacklist
 
 This is a community-contributed list of [referer spam domains](http://en.wikipedia.org/wiki/Referer_spam)
 
-This repository is a fork of [Piwik's referrer spam blacklist](https://github.com/piwik/referrer-spam-blacklist), with the following main highlights:  
+This repository is a fork of [Piwik's referrer spam blacklist](https://github.com/piwik/referrer-spam-blacklist), with the following main highlights:
 
 * Domains are added more frequently to keep up with the spammers (Piwik's list [requires](https://github.com/piwik/referrer-spam-blacklist/issues/26#issuecomment-125881499) a vote and a pull request per added domain, which slows down the update, and prevents [automatic updating](https://github.com/piwik/referrer-spam-blacklist/pull/87))
 * Piwik's list changes are merged back regularly in this reposiory
@@ -13,10 +13,10 @@ This repository is a fork of [Piwik's referrer spam blacklist](https://github.co
 
 The list is stored in this repository in `spammers.txt`. This text file contains one host per line.
 
-You can [download this file manually](https://raw.githubusercontent.com/desbma/referrer-spam-blacklist/master/spammers.txt), download the [whole folder as zip](https://github.com/desbma/referrer-spam-blacklist/archive/master.zip) or clone the repository using git:
+You can [download this file manually](https://raw.githubusercontent.com/desbma/referer-spam-domains-blacklist/master/spammers.txt), download the [whole folder as zip](https://github.com/desbma/referer-spam-domains-blacklist/archive/master.zip) or clone the repository using git:
 
 ```
-git clone https://github.com/desbma/referrer-spam-blacklist.git
+git clone https://github.com/desbma/referer-spam-domains-blacklist.git
 ```
 
 Parsing the file should be pretty easy using your favorite language.
@@ -24,7 +24,7 @@ Parsing the file should be pretty easy using your favorite language.
 
 ## Contributing
 
-To add a new referer spam domain to this list, [click here to edit the spammers.txt file](https://github.com/desbma/referrer-spam-blacklist/edit/master/spammers.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/desbma/referrer-spam-blacklist/issues/new). In your issue or pull request please **explain where the referrer domain(s) appeared and why you think it is coming from a spammer**. If you think a hostname was added but is not actually a spammer, please follow the same process.
+To add a new referer spam domain to this list, [click here to edit the spammers.txt file](https://github.com/desbma/referer-spam-domains-blacklist/edit/master/spammers.txt) and create a pull request. Alternatively you can create a [new issue](https://github.com/desbma/referer-spam-domains-blacklist/issues/new). In your issue or pull request please **explain where the referrer domain(s) appeared and why you think it is coming from a spammer**. If you think a hostname was added but is not actually a spammer, please follow the same process.
 
 If you open a pull request, it is appreciated if you keep one hostname per line, keep the list ordered alphabetically, and use [Linux line endings](http://en.wikipedia.org/wiki/Newline).
 
