@@ -32,8 +32,8 @@ cp $TMP_DIR/referer-spam-domains-blacklist/spammers.txt ${NEW_LIST_FILE}
 
 # stats
 list_changed=false
-diff -U 0 ${OLD_LIST_FILE} ${NEW_LIST_FILE} > $TMP_DIFF_FILE || list_changed=true
-echo "$(tail -n +3 $TMP_DIFF_FILE | grep -c '^+') domains added, $(tail -n +3 $TMP_DIFF_FILE | grep -c '^-') removed"
+diff -U 0 ${OLD_LIST_FILE} ${NEW_LIST_FILE} | tail -n +3 > $TMP_DIFF_FILE || list_changed=true
+echo "$(grep -c '^+' $TMP_DIFF_FILE) domains added, $(grep -c '^-' $TMP_DIFF_FILE) removed"
 
 if $list_changed
 then
