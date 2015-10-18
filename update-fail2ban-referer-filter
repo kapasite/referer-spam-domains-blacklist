@@ -2,7 +2,7 @@
 
 set -o pipefail
 
-readonly NEW_LIST_FILE=/etc/fail2ban/referrer-spam-blacklist.txt
+readonly NEW_LIST_FILE=/etc/fail2ban/referer-spam-blacklist.txt
 readonly OLD_LIST_FILE=${NEW_LIST_FILE}.old
 
 # auto cleanup
