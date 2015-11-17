@@ -4,7 +4,7 @@ import subprocess
 import re
 
 spamfile = "spammers.txt"
-weblogs = "/var/lib/lxc/webserver/rootfs/var/log/apache2/access-*.log"
+weblogs = "/var/lib/lxc/webserver/rootfs/var/log/apache2/access-*.log /var/lib/lxc/webserver/rootfs/var/log/apache2/access-*.log.1"
 ownurls = ["f00l.de"]
 
 # read spammers for later checks
