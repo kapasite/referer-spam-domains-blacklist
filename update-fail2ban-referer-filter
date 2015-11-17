@@ -26,7 +26,7 @@ mv ${NEW_LIST_FILE} ${OLD_LIST_FILE}
 
 # download blocklist while getting around stupid github hotlink protection
 pushd $TMP_DIR > /dev/null
-git clone -q https://github.com/desbma/referer-spam-domains-blacklist.git
+git clone -q  --depth 1 https://github.com/desbma/referer-spam-domains-blacklist.git
 popd  > /dev/null
 cp $TMP_DIR/referer-spam-domains-blacklist/spammers.txt ${NEW_LIST_FILE}
 
