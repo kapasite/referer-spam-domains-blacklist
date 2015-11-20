@@ -163,6 +163,7 @@ blackplanet.com
 blackwitchcraft.ru
 blavia.00author.com
 bleacherreport.com
+blockworld.ru
 blog.f00kclan.de
 blog.f1-direkt.de
 blog.koorg.ru
@@ -533,6 +534,7 @@ galeon.com
 game-top.su
 games.kolossale.ru
 ganja-seeds.net
+gardene.ru
 gaz-voshod.ru
 gcup.ru
 gdcentre.ru
@@ -1096,7 +1098,7 @@ remont-fridge-tv.ru
 remont-komputerov-notebook.ru
 remont-mobile-phones.ru
 remont-ustanovka-tehniki.ru
-REMOTE-COMPUTER-MONITORING.NET
+remote-computer-monitoring.net
 remote-computer.de
 remote-dba.de
 remotecall.de
@@ -1435,6 +1437,7 @@ vduplo.ru
 vegascosmetics.ru
 venta-prom.ru
 ventelnos.com
+vesta-lada.net
 vezuviy.su
 via-gra.webstarts.com
 viagra-canada.in
