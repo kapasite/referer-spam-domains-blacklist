@@ -47,8 +47,12 @@ if __name__ == "__main__":
         futures.append(future)
 
   # write new file
+  domains_removed_count = 0
   with open(args.list_file, "wt") as list_file:
     for future, domain in zip(futures, domains):
       dead = future.result()
       if not dead:
         list_file.write("%s\n" % (domain))
+      else:
+        domains_removed_count += 1
+  print("\n%u dead domains removed" % (domains_removed_count))
