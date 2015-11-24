@@ -160,6 +160,8 @@ blog.remote-computer.de
 blogs.rediff.com
 blogster.com
 blog.yam.com
+blackhatworth.com
+blogtotal.de
 bluerobot.info
 blue-square.biz
 bmw.afora.ru
@@ -191,6 +193,7 @@ budmavtomatika.com.ua
 buigas.00it.com
 buqayy0.livejournal.com
 burgerinmac.com.ua
+burger-imperia.com
 buttons-for-website.com
 buttons-for-your-website.com
 buyantiviralwp.com
@@ -245,6 +248,7 @@ club-musics.ru
 club-samodelkin.ru
 cobaltpro.ru
 cocyq.inwtrade.com
+clicksor.com
 coderstate.com
 codysbbq.com
 coffee211.angelfire.com
@@ -502,6 +506,7 @@ germes-trans.com
 get-free-social-traffic.com
 get-free-traffic-now.com
 gfaq.ru
+get-your-social-buttons.info
 ghazel.ru
 ghernnqr.skyrock.com
 gheus.altervista.org
@@ -1122,6 +1127,7 @@ ski-centers.com
 skladvaz.ru
 slavic-magic.ru
 slavkokacunko.de
+sitevaluation.org
 sledstvie-veli.net
 slkrm.ru
 slujbauborki.ru
@@ -1132,6 +1138,7 @@ sms2x2.ru
 snjatie-geroinovoy-lomki.ru
 snomer1.ru
 snyatie-lomki-v-stacionare.ru
+snip.to
 soaksoak.ru
 soblaznu.net
 socas.pluto.ro
@@ -1468,6 +1475,12 @@ zakazfutbolki.com
 zakazvzloma.com
 zaloadi.ru
 zarenica.net
+wordpress-crew.net
+ykecwqlixx.ru
+youporn-forum.ga
+youporn-forum.uni.me
+youporn-ru.com
+yourserverisdown.com
 zastroyka.org
 zeleznobeton.ru
 zerocash.msk.ru
