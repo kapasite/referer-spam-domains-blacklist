@@ -4,6 +4,7 @@
 
 import argparse
 import concurrent.futures
+import functools
 import ipaddress
 import socket
 import subprocess
@@ -41,6 +42,7 @@ def dns_resolve(domain, dns_server):
   return False
 
 
+@functools.lru_cache(maxsize=2048)
 def has_tcp_port_open(ip, port):
   """ Return True if domain is listening on a TCP port, False instead. """
   r = True
@@ -87,7 +89,7 @@ if __name__ == "__main__":
   tcp_check_futures = {}
   domains_to_check_count = 0
   checks_done_count = 0
-  with concurrent.futures.ThreadPoolExecutor(max_workers=64) as executor:
+  with concurrent.futures.ThreadPoolExecutor(max_workers=16) as executor:
     for dns_check_domain_futures, domain in zip(dns_check_futures, domains):
       dns_check_domain_results = tuple(f.result() for f in dns_check_domain_futures)
       if not any(dns_check_domain_results):
