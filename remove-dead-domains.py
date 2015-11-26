@@ -42,7 +42,7 @@ def dns_resolve(domain, dns_server):
 
 
 def has_tcp_port_open(ip, port):
-  """ Return True if domain is listening on TCP port 80 or 443, False instead. """
+  """ Return True if domain is listening on a TCP port, False instead. """
   r = True
   with socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM) as sckt:
     sckt.settimeout(30)
@@ -105,7 +105,7 @@ if __name__ == "__main__":
         tcp_check_futures[domain] = tcp_check_domain_futures
   for domain, tcp_check_domain_futures in tcp_check_futures.items():
     tcp_check_domain_results = tuple(f.result() for f in tcp_check_domain_futures)
-    if not all(dns_check_domain_results):
+    if not any(dns_check_domain_results):
       # no web port open for this domain
       dead_domains.add(domain)
 
