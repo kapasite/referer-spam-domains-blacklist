@@ -1,7 +1,7 @@
 language: generic
 script:
-  - "diff -u spammers.txt <(sort -uf spammers.txt)"
-  - "diff -u spammers.txt <(sed 's/^www\.//g' spammers.txt)"
+  - diff -u spammers.txt <(sort -uf spammers.txt)
+  - diff -u spammers.txt <(sed 's/^www\.//g' spammers.txt)
 notifications:
   email:
     recipients:
