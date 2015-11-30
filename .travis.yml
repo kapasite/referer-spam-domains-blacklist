@@ -1,0 +1,9 @@
+language: generic
+script:
+  - "diff spammers.txt <(sort -uf spammers.txt)"
+notifications:
+  email:
+    recipients:
+      - secure: "MPy6O8rT7alLTJvFq5HxXltz063ZUTdpLKIxfaC277//2Ags9YjYxpsJbtm8zZuCd/1ic/PkgLBNVxyiE6plbFRAvrs1qlWXayBDqoJ7ulYYJ6rR5S/1eCbm3l4o6ERMuWNG/P5ZJNw6NPProVFLFIrAF9BVafxdsjLqsHa+VAnCDGI6W8OwHp+/s0rQUW6gtmW/43DQiMqd6xD/ZqOrggU5lcHRzLSZVOdrn6xiQgMK7O1xHyWUhXLfOYIftGNmuIF3rMUNcis/emgHiKFIuB55e0K41vq0FMYlKOAPjqhhOePoCPq/t1ZnItPaIxQlZI5DdVzr+AD/uJt994nB7XXpp2cC1ZwQFn/Qe4dBdh3a06sVCL2Z2eg9hXP9jq/Rc/e7LnGourdiJYU7wT/S6MqXedHa4PjCj61yvE1WbekJpWw33K18mSv8QAksM/550M+moLwvLBrB8MzlykfYqM91Wy08HlPWXIYb4anOtncggS+hQNT/DiL++GR9KvFIRT368rg7GscRYDKtqEFAgfqfNkSmrmH3gfUhJ1WoqqPQrHH11dJQGXeOKtFoiQFiy/9R3xKymsdGn/UT/cNhKvvVVWvAEKEen/uqoPs1lTQmXog60zauSHh+mx3Ke0WIaD5wjOsNrpI9ampilI/9kp8r85eL+bHg63Wj09cYfmM="
+    on_success: always
+    on_failure: always
