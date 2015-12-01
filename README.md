@@ -67,7 +67,7 @@ Then, run the script a first time to generate the filter:
 
 Although the list is mostly updated by automated scripts, **contributions to the list are welcome**.
 
-To add domain(s) either [open an issue]((https://github.com/desbma/referer-spam-domains-blacklist/issues/new)) or submit a pull request. The latter is prefered for large additions.
+To add domain(s) either [open an issue](https://github.com/desbma/referer-spam-domains-blacklist/issues/new) or submit a pull request. The latter is prefered for large additions.
 Either way, please **explain how you have found the referer domain(s)** (it is important to avoid false positives).
 
 If you think a hostname was added but is not actually a spam domain, please open an issue.
