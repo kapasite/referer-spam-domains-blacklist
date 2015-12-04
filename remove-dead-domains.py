@@ -25,7 +25,7 @@ count_lock = threading.Lock()
 
 def dns_resolve(domain, dns_server):
   """ Return IP string if domain has a DNA A record on this DNS server, False otherwise. """
-  cmd = ("dig", "+short", "+time=10", "+tries=6", "@%s" % (dns_server), domain)
+  cmd = ("dig", "+short", "+time=5", "+tries=12", "@%s" % (dns_server), domain)
   output = subprocess.check_output(cmd, universal_newlines=True)
   # update progress
   global checks_done_count, count_lock
@@ -47,7 +47,7 @@ def has_tcp_port_open(ip, port):
   """ Return True if domain is listening on a TCP port, False instead. """
   r = True
   with socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM) as sckt:
-    sckt.settimeout(30)
+    sckt.settimeout(10)
     try:
       sckt.connect((ip, port))
     except (ConnectionRefusedError, socket.timeout):
@@ -116,4 +116,4 @@ if __name__ == "__main__":
    for domain in domains:
       if domain not in dead_domains:
         list_file.write("%s\n" % (domain))
-  print("\n%u dead domains removed" % (len(dead_domains)))
+  print("\n%u dead domain(s) removed" % (len(dead_domains)))
