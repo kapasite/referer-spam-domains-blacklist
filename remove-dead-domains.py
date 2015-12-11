@@ -25,7 +25,7 @@ count_lock = threading.Lock()
 
 def dns_resolve(domain, dns_server):
   """ Return IP string if domain has a DNA A record on this DNS server, False otherwise. """
-  cmd = ("dig", "+short", "+time=5", "+tries=12", "@%s" % (dns_server), domain)
+  cmd = ("dig", "+short", "+time=5", "+tries=999", "@%s" % (dns_server), domain)
   output = subprocess.check_output(cmd, universal_newlines=True)
   # update progress
   global checks_done_count, count_lock
