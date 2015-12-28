@@ -6,6 +6,7 @@ import argparse
 import concurrent.futures
 import functools
 import ipaddress
+import os
 import socket
 import subprocess
 import threading
@@ -76,7 +77,7 @@ if __name__ == "__main__":
   # resolve domains with thread pool
   dns_check_futures = []
   domains_to_check_count = len(domains)
-  with concurrent.futures.ThreadPoolExecutor(max_workers=64) as executor:
+  with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count() * 8) as executor:
     for domain in domains:
       dns_check_domain_futures = []
       for dns_server in DNS_SERVERS:
@@ -89,7 +90,7 @@ if __name__ == "__main__":
   tcp_check_futures = {}
   domains_to_check_count = 0
   checks_done_count = 0
-  with concurrent.futures.ThreadPoolExecutor(max_workers=16) as executor:
+  with concurrent.futures.ThreadPoolExecutor(max_workers=os.cpu_count() * 2) as executor:
     for dns_check_domain_futures, domain in zip(dns_check_futures, domains):
       dns_check_domain_results = tuple(f.result() for f in dns_check_domain_futures)
       if not any(dns_check_domain_results):
