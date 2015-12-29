@@ -40,7 +40,7 @@ To make duplicate detection, and merges easier, the list is sorted with [Unix's 
 
 This list can be used with [Fail2ban](http://www.fail2ban.org/wiki/index.php/Main_Page).
 
-A [script](https://github.com/desbma/referer-spam-domains-blacklist/blob/master/update-fail2ban-referer-filter) is provided to automatically generate or update a filter (located in `/etc/fail2ban/filter.d/apache-referer.local`) that will watch Apache logs, and automatically ban IPs that send HTTP requests with a domain in the blacklist as referer.
+A [script](https://github.com/desbma/referer-spam-domains-blacklist/blob/master/update-fail2ban-referer-filter) is provided to automatically generate or update a filter (located in `/etc/fail2ban/filter.d/apache-referer.local`) that will watch server logs, and automatically ban IPs that send HTTP requests with a domain in the blacklist as referer. It has been tested with Apache, but should work with any webserver configured to log using the [standard combined log format](http://publib.boulder.ibm.com/tividd/td/ITWSA/ITWSA_info45/en_US/HTML/guide/c-logs.html#combined), provided you change log locations in the script.
 
 It is recommended to run the script at least every week with cron, to keep the list up to date:
 
