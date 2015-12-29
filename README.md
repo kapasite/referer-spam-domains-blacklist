@@ -63,6 +63,11 @@ Then, run the script a first time to generate the filter:
     /etc/cron.weekly/update-fail2ban-referer-filter
 
 
+## Usage with Google Analytics
+
+See [this repository](https://github.com/generalredneck/ga-referrer-spam-filters) for a tool to generate and update a Google Analytics filter from this list to remove referer spam.
+
+
 ## Contributing
 
 Although the list is mostly updated by automated scripts, **contributions to the list are welcome**.
