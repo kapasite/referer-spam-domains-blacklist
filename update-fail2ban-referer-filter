@@ -28,7 +28,7 @@ mv ${NEW_LIST_FILE} ${OLD_LIST_FILE}
 pushd $TMP_DIR > /dev/null
 git clone -q  --depth 1 https://github.com/desbma/referer-spam-domains-blacklist.git
 popd  > /dev/null
-cp $TMP_DIR/referer-spam-domains-blacklist/spammers.txt ${NEW_LIST_FILE}
+mv $TMP_DIR/referer-spam-domains-blacklist/spammers.txt ${NEW_LIST_FILE}
 
 # stats
 list_changed=false
