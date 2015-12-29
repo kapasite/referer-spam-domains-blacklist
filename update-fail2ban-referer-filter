@@ -1,5 +1,7 @@
 #!/bin/bash -eu
 
+# This script requires: diff, git
+
 set -o pipefail
 
 readonly NEW_LIST_FILE=/etc/fail2ban/referer-spam-blacklist.txt
