@@ -506,6 +506,7 @@ fotoxxxru.com
 free-floating-buttons.com
 free-share-buttons.com
 free-social-buttons.com
+free-traffic.xyz
 freewebs.com
 freewhatsappload.com
 freshberry.com.ua
@@ -863,6 +864,7 @@ my-bc.ru
 mydownloadengine.com
 mydownlodablefiles.com
 myfreemp3.eu
+myftpupload.com
 myindospace.com
 myliveblog.ru
 my.opera.com
@@ -886,6 +888,7 @@ nbsproject.ru
 negral.pluto.ro
 netallergy.ru
 netpics.org
+net-profits.xyz
 nevansk.ru
 new-apps.ru
 newstraveller.ru
@@ -1223,6 +1226,7 @@ social-buttons.com
 social-fun.ru
 socialseet.ru
 social-vestnik.ru
+social-widget.xyz
 soc-proof.su
 sofit-dmd.ru
 softomix.com
@@ -1491,6 +1495,7 @@ webjam.com
 webmaster-traffic.com
 webmonetizer.net
 webradiology.ru
+web-revenue.xyz
 website-analyzer.info
 websites-reviews.com
 websocial.me
