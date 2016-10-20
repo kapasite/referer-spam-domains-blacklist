@@ -1280,6 +1280,7 @@ socialbuttons.xyz
 social-button.xyz
 social-fun.ru
 socialseet.ru
+socialtrade.biz
 social-traffic-1.xyz
 social-traffic-2.xyz
 social-traffic-3.xyz
@@ -1562,6 +1563,7 @@ webmonetizer.net
 webradiology.ru
 web-revenue.xyz
 website-analyzer.info
+website-speed-checker.site
 websites-reviews.com
 websocial.me
 webtherapy.ru
