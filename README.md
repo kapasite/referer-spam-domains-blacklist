@@ -7,12 +7,11 @@ This is a frequently updated list of [referer spam domains](http://en.wikipedia.
 
 This repository is a fork of [Piwik's referrer spam blacklist](https://github.com/piwik/referrer-spam-blacklist), with the following main differences:
 
-* Domains are added more frequently to keep up with the spammers (Piwik's list [requires](https://github.com/piwik/referrer-spam-blacklist/issues/26#issuecomment-125881499) a vote and a pull request per added domain, which slows down the update, and prevents [automatic updating](https://github.com/piwik/referrer-spam-blacklist/pull/87))
-* Piwik's list changes are merged back regularly in this repository
+* Domains are added more frequently to keep up with the spammers (Piwik's list [requires](https://github.com/piwik/referrer-spam-blacklist/issues/26#issuecomment-125881499) a vote and a pull request per added domain, which slows down the update, and prevents [automatic updating](https://github.com/piwik/referrer-spam-blacklist/pull/87)). **Piwik's list changes are also merged back regularly in this repository.**
 * Large lists of confirmed referer spam domains from other contributors or projects are also merged back
 * Dead domains are regularly removed from the list
 
-As a result this list is **more than 5 times larger** (as of this writing) than Piwik's list.
+As a result this list is **more than 5 times larger** (as of this writing) than Piwik's list, while having less dead domains.
 
 
 ## List format
