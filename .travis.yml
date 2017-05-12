@@ -2,6 +2,7 @@ language: generic
 script:
   - diff -u spammers.txt <(sort -uf spammers.txt)
   - diff -u spammers.txt <(sed 's/^www\.//g' spammers.txt)
+  - diff -u spammers.txt <(python3 -c "import encodings.idna; print('\n'.join(map(lambda x: x.strip().encode('idna').decode(), open('spammers.txt').readlines())))")
 notifications:
   email:
     recipients:
