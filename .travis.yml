@@ -1,9 +1,10 @@
-language: generic
+sudo: false
+language: python
+python: "3.6"
 script:
   - diff -u spammers.txt <(sort -uf spammers.txt)
   - diff -u spammers.txt <(sed 's/^www\.//g' spammers.txt)
   - diff -u spammers.txt <(cat spammers.txt | ./normalize.py)
-
 notifications:
   email:
     recipients:
