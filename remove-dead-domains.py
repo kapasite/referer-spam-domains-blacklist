@@ -90,7 +90,7 @@ if __name__ == "__main__":
                    desc="DNS domain checks",
                    unit=" domains") as progress:
       start_event.set()
-      for i, f in enumerate(concurrent.futures.as_completed([f for dns_check_domain_futures in dns_check_futures \
+      for i, f in enumerate(concurrent.futures.as_completed([f for dns_check_domain_futures in dns_check_futures
                                                              for f in dns_check_domain_futures])):
         if (i % len(DNS_SERVERS)) == 0:
           progress.update(1)
@@ -120,7 +120,7 @@ if __name__ == "__main__":
                    unit=" domains",
                    leave=True) as progress:
       start_event.set()
-      for i, f in enumerate(concurrent.futures.as_completed([f for p in tcp_check_futures.values() \
+      for i, f in enumerate(concurrent.futures.as_completed([f for p in tcp_check_futures.values()
                                                              for f in p])):
         if (i % len(WEB_PORTS)) == 0:
           progress.update(1)
