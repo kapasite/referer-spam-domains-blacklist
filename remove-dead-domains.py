@@ -67,6 +67,7 @@ if __name__ == "__main__":
     # add work
     for domain in tqdm.tqdm(domains,
                             desc="Adding DNS domain check work to thread pool",
+                            unit=" domains",
                             leave=True):
       dns_check_domain_futures = []
       for dns_server in DNS_SERVERS:
@@ -77,10 +78,12 @@ if __name__ == "__main__":
     # show progress
     for dns_check_domain_futures in tqdm.tqdm(dns_check_futures,
                                               desc="DNS domain checks",
+                                              unit=" domains",
                                               leave=True):
       for _ in tqdm.tqdm(concurrent.futures.as_completed(dns_check_domain_futures),
                          total=len(dns_check_domain_futures),
                          desc="Per domain DNS checks",
+                         unit=" DNS servers",
                          leave=True):
         pass
 
@@ -104,10 +107,12 @@ if __name__ == "__main__":
     # show progress
     for domain in tqdm.tqdm(tcp_check_futures,
                             desc="TCP domain check",
+                            unit=" domains",
                             leave=True):
       for _ in tqdm.tqdm(concurrent.futures.as_completed(tcp_check_futures[domain]),
                          total=len(tcp_check_futures[domain]),
                          desc="Per domain TCP port server check",
+                         unit=" port checks",
                          leave=True):
         pass
 
