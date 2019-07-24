@@ -26,7 +26,7 @@ fi
 
 # download blocklist while getting around stupid github hotlink protection
 pushd $TMP_DIR > /dev/null
-git clone -q  --depth 1 https://github.com/kapasite/referer-spam-domains-blacklist.git
+git clone -q  --depth 1 https://github.com/desbma/referer-spam-domains-blacklist.git
 popd  > /dev/null
 readonly NEW_LIST_FILE=$TMP_DIR/referer-spam-domains-blacklist/spammers.txt
 
